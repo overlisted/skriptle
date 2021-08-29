@@ -1,0 +1,13 @@
+{
+  "name": "skriptle",
+  "version": "1.0.0",
+  "scripts": {
+    "discord-invite-spammer": "node src/discord-invite-spammer.js"
+  },
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "socket.io-client": "^2"
+  }
+}
