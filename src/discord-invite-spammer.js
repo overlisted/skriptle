@@ -27,6 +27,8 @@ const spamInRandomRoom = async (gameServer, userData, captchaToken) => {
   simpleLog(`Joined lobby (players: ${Array.from(state.players.values()).map(it => it.name).join(", ")})`);
 
   socket.on("chat", data => {
+    if (data.id == state.myID) return;
+
     const sender = state.players.get(data.id);
     if (!sender) return;
 
